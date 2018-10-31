@@ -160,5 +160,5 @@ In the above example, your config initializations under `local` would look very 
 
 ## Erata
 
-Did you find some bug with this document?  Want to improve it?  Go ahead and submit an issue on Github.
+Did you find some bug with this document?  Want to improve it?  Go ahead and submit an issue on [Github](https://github.com/adamsanghera/DSMaterials/blob/master/prompt.md).
 
