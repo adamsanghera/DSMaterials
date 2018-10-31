@@ -9,7 +9,7 @@ The development of this project is divided into 3 stages!
 The stages are split up as follows:
 
 1. A monolithic web application, with all logic and persistence happening on process.  This process exposes a simple social media website.
-1. The monolithic web application is now split into several services, with a *stateless* web server and *at least one* backend service, which persist data and communicate with the stateless web server via gRPC.
+1. The monolithic web application is now split into several services, with a *stateless* web server and *at least one* backend service, which persists data and communicates with the stateless web server via gRPC.
 1. The backend service(s) are now stateless, persisting their state in a raft, replicated data store.
 
 \newpage
@@ -20,7 +20,7 @@ The stages are split up as follows:
 
 #### Summary
 
-A simple web application, comprised of a web server written in Go, serving html files from a single machine.  For this stage of project, you do not need to persist data in files or a database – instead, keep everything in memory.  Do not use a database for this application.
+A simple web application, comprised of a web server written in Go, serving html files from a single machine.  For this stage of the project, you do not need to persist data in files or a database – instead, keep everything in memory.  Do not use a database for this application.
 
 #### Features
 
@@ -52,7 +52,7 @@ On that note, if you want to use frameworks such as buffalo or ginkgo, go ahead,
 
 #### Structure
 
-As a friendly advice, you should try to structure your application as follows.  You don't *need* to, but it will definitely make stage 2 easier!
+As friendly advice, you should try to structure your application as follows.  You don't *need* to, but it will definitely make stage 2 easier!
 
         cmd
         |-- web
@@ -107,7 +107,7 @@ In the next stage, you will split off your backend into a separate service.  It 
 
 This service (set) must communicate with the web server using an RPC Framework like gRPC (strongly recommended!) or Thrift.  If you run into any issues getting these frameworks set up, don't hesitate to contact the TA!
 
-At this point, your webpage service (i.e. the service that is rendeirng templates / serving web pages) should be *stateless*.  In practical terms, you should be able to horizontally scale your web service without causing any concurrency problems on the backend, or UX problems on the front end.  The Web Service should no longer be persisting any data (even session data!!), but instead be fully reliant on the backend service.  If this isn't the case, you still have work to do :)
+At this point, your webpage service (i.e. the service that is rendering templates / serving web pages) should be *stateless*.  In practical terms, you should be able to horizontally scale your web service without causing any concurrency problems on the backend, or UX problems on the front end.  The Web Service should no longer be persisting any data (even session data!!), but instead be fully reliant on the backend service.  If this isn't the case, you still have work to do :)
 
 Depending on how you solved stage 1, this could be REALLY challenging -- you might need to totally re-write your service, in some cases.  If you followed the model your TA showed in-class, however, this might be the least time-intensive stage.  If you have extra time and want a challenge, you might want to implement more features, or split the backend into more distinct services.
 
@@ -158,7 +158,7 @@ In the above example, your config initializations under `local` would look very 
 
 \newpage
 
-## Erata
+## Errata
 
 Did you find some bug with this document?  Want to improve it?  Go ahead and submit an issue on [Github](https://github.com/adamsanghera/DSMaterials/blob/master/prompt.md).
 
