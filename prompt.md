@@ -12,6 +12,8 @@ The stages are split up as follows:
 1. The monolithic web application is now split into several services, with a *stateless* web server and *at least one* backend service, which persists data and communicates with the stateless web server via gRPC.
 1. The backend service(s) are now stateless, persisting their state in a raft, replicated data store.
 
+These segments are due November 13th, November 27th, and December 6th, respectively.
+
 \newpage
 
 ## Stage 1
